@@ -6,7 +6,6 @@ public class Health : MonoBehaviour {
 
     [SerializeField] float health = 100;
     [SerializeField] GameObject deathVFX;
-    [SerializeField] float deathVFXDestroyDelay = 2f;
 
     private void Die()
     {
