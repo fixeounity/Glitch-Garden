@@ -15,4 +15,5 @@ public class Attacker : MonoBehaviour {
     {
         currentSpeed = speed;
     }
+
 }
