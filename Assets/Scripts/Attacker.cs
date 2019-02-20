@@ -6,14 +6,28 @@ public class Attacker : MonoBehaviour {
 
     [Range(0f,5f)]float currentSpeed = 1f;
 
-	// Update is called once per frame
-	void Update () {
+    GameObject currentTarget;
+    Animator animator;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+
+    // Update is called once per frame
+    void Update () {
         transform.Translate(Vector2.left * currentSpeed * Time.deltaTime);
 	}
 
     public void SetMovementSpeed(float speed)
     {
         currentSpeed = speed;
+    }
+
+    public void Attack(GameObject target)
+    {
+        animator.SetBool("IsAttacking", true);
+        currentTarget = target;
     }
 
 }
