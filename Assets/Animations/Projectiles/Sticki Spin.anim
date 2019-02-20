@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Zucchini Spin
+  m_Name: Sticki Spin
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -19,20 +19,20 @@ AnimationClip:
       - serializedVersion: 3
         time: 0
         value: {x: 0, y: 0, z: 360}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
+        inSlope: {x: 0, y: 0, z: -419.40616}
+        outSlope: {x: 0, y: 0, z: -419.40616}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.079503745}
       - serializedVersion: 3
         time: 1
         value: {x: 0, y: 0, z: 0}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
+        inSlope: {x: 0, y: 0, z: -333.92285}
+        outSlope: {x: 0, y: 0, z: -333.92285}
         tangentMode: 0
         weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.08252674}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -140,20 +140,20 @@ AnimationClip:
       - serializedVersion: 3
         time: 0
         value: 360
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
+        inSlope: -419.40616
+        outSlope: -419.40616
+        tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
-        outWeight: 0.33333334
+        outWeight: 0.079503745
       - serializedVersion: 3
         time: 1
         value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
+        inSlope: -333.92285
+        outSlope: -333.92285
+        tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
+        inWeight: 0.08252674
         outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
