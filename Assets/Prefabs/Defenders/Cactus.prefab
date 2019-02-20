@@ -53,6 +53,7 @@ GameObject:
   - component: {fileID: 95006745397262508}
   - component: {fileID: 114545243881867690}
   - component: {fileID: 114989930228478660}
+  - component: {fileID: 61305057015606508}
   m_Layer: 0
   m_Name: Cactus
   m_TagString: Untagged
@@ -66,14 +67,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1904987536597024}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.625654, y: 5.1319175, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 3.340199, y: 4.0339465, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4208281659220664}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!4 &4208281659220664
 Transform:
   m_ObjectHideFlags: 1
@@ -95,12 +96,37 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1853693844627948}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.58299994, y: 0, z: 0}
+  m_LocalPosition: {x: -0.5829999, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4208281659220664}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &61305057015606508
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1904987536597024}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.013339996}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.02666, y: 1.02668}
+  m_EdgeRadius: 0
 --- !u!95 &95006745397262508
 Animator:
   serializedVersion: 3
@@ -130,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a6d8dcf9e350e34cad83ac95dce36d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 1389916195046600, guid: 59b5e37caa2890442b0e7fa944d41285,
+  projectilePrefab: {fileID: 1042148442173394, guid: 7bd164907137cde43ab58632647b8a4f,
     type: 2}
   gun: {fileID: 1853693844627948}
 --- !u!114 &114989930228478660

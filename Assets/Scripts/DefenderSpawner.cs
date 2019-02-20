@@ -29,7 +29,7 @@ public class DefenderSpawner : MonoBehaviour {
     private void SpawnDefender(Vector2 roundedPos)
     {
         if (!defenderPrefab) return;
-        var defender = Instantiate(defenderPrefab, roundedPos, Quaternion.identity) as Defender;
+        var defender = Instantiate(defenderPrefab, roundedPos, defenderPrefab.transform.rotation) as Defender;
     }
 
     public void SetSelectedDefender(Defender defenderToSelect)
@@ -47,4 +47,5 @@ public class DefenderSpawner : MonoBehaviour {
             starDisplay.SpendStars(defenderCost);
         }
     }
+
 }
