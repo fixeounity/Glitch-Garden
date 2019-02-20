@@ -6,23 +6,31 @@ public class Shooter : MonoBehaviour {
 
     [SerializeField] GameObject projectilePrefab;
     [SerializeField] GameObject gun;
+
     AttackerSpawner myLaneSpawner;
+    Animator animator;
 
     private void Start()
     {
         SetLaneSpawner();
+        animator = GetComponent<Animator>();
+    }
+
+    private void Defend()
+    {
+        if (IsAttackerInLane())
+        {
+            animator.SetBool("IsAttacking", true);
+        }
+        else
+        {
+            animator.SetBool("IsAttacking", false);
+        }
     }
 
     private void Update()
     {
-        if (IsAttackerInLane())
-        {
-            Debug.Log("Shoot");
-        }
-        else
-        {
-            Debug.Log("Sit and wait");
-        }
+        Defend();
     }
 
     public void Fire()
