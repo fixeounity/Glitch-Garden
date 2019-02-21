@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Level : MonoBehaviour {
 
-    [SerializeField] float timeToWait = 4f;
+    [SerializeField] float startScreenDelay = 4f;
+    [SerializeField] float gameOverDelay = 2f;
 
     int currentSceneIndex = 0;
 
@@ -29,10 +30,31 @@ public class Level : MonoBehaviour {
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
+    public void LoadGameOver()
+    {
+        SceneManager.LoadScene("Game Over");
+    }
+
+    private IEnumerator LoadGameOverWithDelayImpl()
+    {
+        yield return new WaitForSeconds(gameOverDelay);
+        LoadGameOver();
+    }
+
+    public void LoadGameOverWithDelay()
+    {
+        StartCoroutine(LoadGameOverWithDelayImpl());
+    }
+
     private IEnumerator LoadStartScreenWithDelay()
     {
-        yield return new WaitForSeconds(timeToWait);
+        yield return new WaitForSeconds(startScreenDelay);
         LoadStartScreen();
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 	
 }
