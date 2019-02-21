@@ -47,4 +47,14 @@ public class Attacker : MonoBehaviour {
         }
     }
 
+    private void OnDestroy()
+    {
+        FindObjectOfType<LevelController>().AttackerKilled();
+    }
+
+    private void Awake()
+    {
+        FindObjectOfType<LevelController>().AttackerSpawned();
+    }
+
 }

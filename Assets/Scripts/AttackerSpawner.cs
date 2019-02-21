@@ -9,7 +9,6 @@ public class AttackerSpawner : MonoBehaviour {
     [SerializeField] float maxSpawnDelay = 5f;
     [SerializeField] List<Attacker> attackerPrefabs;
 
-
     // Use this for initialization
     IEnumerator Start () {
         if (attackerPrefabs.Count <= 0) yield return null;
@@ -36,6 +35,11 @@ public class AttackerSpawner : MonoBehaviour {
         if (attackerPrefabs.Count <= 0) return;
         int attackerIndex = Random.Range(0, attackerPrefabs.Count);
         Spawn(attackerPrefabs[attackerIndex]);
+    }
+
+    public void StopSpawning()
+    {
+        spawn = false;
     }
 
 }
