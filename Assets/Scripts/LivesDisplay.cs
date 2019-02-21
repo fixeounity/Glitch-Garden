@@ -33,7 +33,7 @@ public class LivesDisplay : MonoBehaviour {
 
     private void Die()
     {
-        FindObjectOfType<Level>().LoadGameOverWithDelay();
+        FindObjectOfType<LevelLoader>().LoadGameOverWithDelay();
     }
 
 }

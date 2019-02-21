@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4064422990989028}
   - component: {fileID: 114355642479808354}
   m_Layer: 0
-  m_Name: Level
+  m_Name: Level Loader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,4 +51,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b299ca919a617b045ba9b2192292805e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToWait: 4
+  startScreenDelay: 4
+  gameOverDelay: 2
