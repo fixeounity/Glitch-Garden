@@ -20,15 +20,22 @@ public class AttackerSpawner : MonoBehaviour {
         }
     }
 
-    private void SpawnAttacker()
+    private void Spawn(Attacker attacker)
     {
         Attacker newAttacker = Instantiate(
-        attackerPrefabs[0],
-        transform.position,
-        attackerPrefabs[0].transform.rotation
+            attacker,
+            transform.position,
+            attacker.transform.rotation
         ) as Attacker;
 
         newAttacker.transform.parent = transform;
+    }
+
+    private void SpawnAttacker()
+    {
+        if (attackerPrefabs.Count <= 0) return;
+        int attackerIndex = Random.Range(0, attackerPrefabs.Count);
+        Spawn(attackerPrefabs[attackerIndex]);
     }
 
 }
