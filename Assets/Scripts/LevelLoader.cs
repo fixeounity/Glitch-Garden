@@ -22,6 +22,7 @@ public class LevelLoader : MonoBehaviour {
 
     public void LoadStartScreen()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("Start Screen");
     }
 
@@ -50,6 +51,12 @@ public class LevelLoader : MonoBehaviour {
     {
         yield return new WaitForSeconds(startScreenDelay);
         LoadStartScreen();
+    }
+
+    public void ReloadCurrentScene()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(currentSceneIndex);
     }
 
     public void QuitGame()
