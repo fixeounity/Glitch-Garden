@@ -4,7 +4,23 @@ using UnityEngine;
 
 public class DefenderSpawner : MonoBehaviour {
 
+    GameObject defenderParent;
     Defender defenderPrefab;
+    const string DEFENDER_PARENT_NAME = "Defenders";
+
+    private void Start()
+    {
+        CreateDefenderParent();
+    }
+
+    private void CreateDefenderParent()
+    {
+        defenderParent = GameObject.Find(DEFENDER_PARENT_NAME);
+        if (!defenderParent)
+        {
+            defenderParent = new GameObject(DEFENDER_PARENT_NAME);
+        }
+    }
 
     private void OnMouseDown()
     {
@@ -25,11 +41,17 @@ public class DefenderSpawner : MonoBehaviour {
         float newY = Mathf.RoundToInt(rawWorldPos.y);
         return new Vector2(newX, newY);
     }
-    
+
+    private void AttachToParent(Defender newDefender)
+    {
+        newDefender.transform.parent = defenderParent.transform;
+    }
+
     private void SpawnDefender(Vector2 roundedPos)
     {
         if (!defenderPrefab) return;
-        var defender = Instantiate(defenderPrefab, roundedPos, defenderPrefab.transform.rotation) as Defender;
+        var newDefender = Instantiate(defenderPrefab, roundedPos, defenderPrefab.transform.rotation) as Defender;
+        AttachToParent(newDefender);
     }
 
     public void SetSelectedDefender(Defender defenderToSelect)
