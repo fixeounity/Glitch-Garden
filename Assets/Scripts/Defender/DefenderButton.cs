@@ -1,10 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class DefenderButton : MonoBehaviour {
 
     [SerializeField] Defender defenderPrefab;
+
+    private void Start()
+    {
+        LabelButtonWithCost();
+    }
+
+    private void LabelButtonWithCost()
+    {
+        TextMeshProUGUI costText = GetComponentInChildren<TextMeshProUGUI>();
+        if (!costText)
+        {
+            Debug.LogError(name + " has no cost text, add one!");
+        }
+        else
+        {
+            costText.text = defenderPrefab.GetStarCost().ToString();
+        }
+    }
 
     private void ChangeButtonStyle()
     {
