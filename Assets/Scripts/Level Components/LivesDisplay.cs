@@ -7,10 +7,18 @@ public class LivesDisplay : MonoBehaviour {
 
     [SerializeField] int lives = 100;
     [SerializeField] int damage = 1;
+
     TextMeshProUGUI livesText;
+
+    private void SetupDifficulty()
+    {
+        lives = (int)(lives * (1 - PlayerPrefsController.GetDifficulty()));
+    }
 
     private void Start()
     {
+        SetupDifficulty();
+
         livesText = GetComponent<TextMeshProUGUI>();
         UpdateDisplay();
     }

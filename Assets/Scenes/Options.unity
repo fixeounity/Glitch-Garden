@@ -198,6 +198,12 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &164328614 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114588684169252160, guid: a09c2b9c4de9dfe45b2f353c2379ec22,
+    type: 2}
+  m_PrefabInternal: {fileID: 1610450328}
+  m_Script: {fileID: 11500000, guid: 36197b163db183249ba876928f1496fd, type: 3}
 --- !u!1 &186359207
 GameObject:
   m_ObjectHideFlags: 0
@@ -932,12 +938,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a584fde6025e4b4aaa06a6a1d3091fb, type: 2}
   m_IsPrefabAsset: 0
---- !u!114 &707065576 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114355642479808354, guid: 2a584fde6025e4b4aaa06a6a1d3091fb,
-    type: 2}
-  m_PrefabInternal: {fileID: 707065575}
-  m_Script: {fileID: 11500000, guid: b299ca919a617b045ba9b2192292805e, type: 3}
 --- !u!1 &736917130
 GameObject:
   m_ObjectHideFlags: 0
@@ -1427,7 +1427,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1015482403}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 164328614}
+        m_MethodName: SetDefault
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1094594035
@@ -1782,8 +1793,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 707065576}
-        m_MethodName: LoadStartScreen
+      - m_Target: {fileID: 164328614}
+        m_MethodName: SaveAndExit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1933,6 +1944,58 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1451926302}
   m_CullTransparentMesh: 0
+--- !u!1001 &1610450328
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4586984374408816, guid: a09c2b9c4de9dfe45b2f353c2379ec22, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 241.5906
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586984374408816, guid: a09c2b9c4de9dfe45b2f353c2379ec22, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 41.948486
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586984374408816, guid: a09c2b9c4de9dfe45b2f353c2379ec22, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2.293611
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586984374408816, guid: a09c2b9c4de9dfe45b2f353c2379ec22, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586984374408816, guid: a09c2b9c4de9dfe45b2f353c2379ec22, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586984374408816, guid: a09c2b9c4de9dfe45b2f353c2379ec22, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586984374408816, guid: a09c2b9c4de9dfe45b2f353c2379ec22, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4586984374408816, guid: a09c2b9c4de9dfe45b2f353c2379ec22, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114588684169252160, guid: a09c2b9c4de9dfe45b2f353c2379ec22,
+        type: 2}
+      propertyPath: volumeSlider
+      value: 
+      objectReference: {fileID: 134893037}
+    - target: {fileID: 114588684169252160, guid: a09c2b9c4de9dfe45b2f353c2379ec22,
+        type: 2}
+      propertyPath: difficultySlider
+      value: 
+      objectReference: {fileID: 206804057}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a09c2b9c4de9dfe45b2f353c2379ec22, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1852306132
 GameObject:
   m_ObjectHideFlags: 0
